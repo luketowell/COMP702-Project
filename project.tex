@@ -127,19 +127,82 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 %%%%  INTRODUCTION
 
 \chapter{Introduction}\label{chap:intro}
+
+\section{Scope}
+
+\subsection{ASDA}
+This project is being completed on behalf of ASDA. 
+ASDA is one of the four largest supermarkets chain in the UK and is owned by Wal-Mart which is the largest company in the world. 
+Despite this project being completed on behalf of ASDA the applications and software that will be produced at the end of it will
+ be suitable for use by any business which deals with products that have an expiration date or use by date.
+
+\subsection{Benefits}
+
+\section{Problem Statement}\label{sec:problem}
+
 The aim of this project is to design an application and stocking system which is able
  to inform store managers and store colleagues of stock that is going out of date / 
  close to going out of date on the shop floor. This stock will then either be marked 
  down on the shop floor in order to be sold on the day or will be donated to other charitable
-causes within the local community as part of the ASDA commitment to engage and assist in the local community. 
+causes within the local community as part of the ASDA commitment to engage and assist in the local community.
+\\
+\\
+The key goals of the developed system are to include:
 
+- Colleagues will be directed to which items need to be marked down.
 
-\section{Scope}
+- Hours spent in store manually marking down products will be reduced.
 
-\section{Problem Statement}\label{sec:problem}
+- Stock which is wasted will be reduced and identified for redistribution.
+
 
 \section{Approach}
 
+\subsection{Project Methodology}
+The methodology that I have chosen to implement this project in is a scrum agile methodology which involves short iterations of development spread over the 8 weeks I will be developing my solution in. 
+This will include the breaking down of the application development into smaller development tasks which can be completed easily. 
+\\
+\\
+Scrum involves the sizing, estimation and development of the development tasks prior to development. Once completed the developed features will be demoed to the project supervisors and stakeholders in order to gain feedback which can potentially be added to the project backlog and acted on in following sprints
+
+\subsection{Architectural Diagram}
+
+- The Application will be reachable via 3 methods:
+\\
+- An android application which is available on in store handsets called TC70, TC70X and TC72. These devices are available to all colleagues who work within ASDA stores and are frequently used for other applications within the store eco system.
+\\
+- An android and iOS application which will be downloadable and usable from users personal devices
+A web browser which is accessible from a managers workbench or a colleague laptop. 
+
+\subsection{Continuous Integration \& Continuous Deployment}
+
+\subsection{Application Breakdown}
+As shown in the architectural diagram the application will consist of three seperate applications and 2 databases.
+ Below are the descriptions and breakdowns of the applications:
+
+\subsubsection{Mobile Application}
+The mobile versions of the application will be written using React-Native which is a modern mobile development
+ framework created and maintained by Facebook. The reason for choosing React Native is because of the fact that it is a well known and well documented framework with a large and active user community. It is also the recommended mobile development framework for ASDA and Wal-Mart. 
+
+\subsubsection{Web Application}
+The web application will be written using React which is very similar to React-native and has also been widely adopted. There are plenty of libraries for React and it is the chosen development framework because I am already familiar with the React ecosystem. 
+
+\subsubsection{Backend Web Services}
+written in Java spring boot which ensures that the services will be enterprise worthy. The services will be hosted within a docker image and will be able to be span up on either Azure application servers or Azure Kubernetes clusters. Object orientated services written using the repository design pattern. All services will be thoroughly unit tested. The webservices will be documented using Swagger so that users and future developers are easily able to pick up and alter the code base. 
+
+\subsubsection{Azure SQL Databases}
+SQL data which will be encrypted in transit and at rest manually. This database will contain the item data including sell by and use by dates as well as unique item Identifier and item Name. At the moment I am unsure as to if I will store images of the individual items. If I do then the SQL database will also store the references to the relevant item images.
+
+\subsubsection{Azure Cosmos Database}
+The use of Azure Cosmos DB for logging data due to the speed that items can be both written and retrieved from the data stores. Azure Cosmos DB is the Azure non relational database offering with encryption both in transit and at rest. Azure also guarantee an uptime of 99.99999\% 
+
+\subsubsection{Authentication \& Authorisation}
+SingleSignOn is the authentication method which I have chosen to adopt for all of my applications. This allows the applications to integrate well within the ASDA technology stack and ensures that colleagues will be able to authenticate with their normal credentials. This removes the need for colleagues to need to remember new credentials or to have to have other accounts created in order to use the Xpire application. 
+
+\subsection{UML}
+UML diagram of example task for frequently performed tasks
+
+\subsection{Interaction Chart}
 
 \section {Outcome}
 

@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt]{report}
-
+\usepackage{cite}
 
 %%%%  Add some length to the page, as margins always seem too big.  
 \addtolength{\topmargin}{-1.5in}
@@ -224,7 +224,7 @@ We base some of our results on the previous work of other authors~\cite{A1, Some
 \section{Original design}\label{chap:first_design}
 The original design document that was submitted can be found in 
 Appendix~\ref{app:Original_design}.  The idea of that design
-was as follows....
+was as follows.... ~\cite{latexcompanion}
 
 
 \section{Changes to original design}
@@ -240,19 +240,8 @@ was as follows....
 %%%%  Section for references, using the \bibitem directive to 
 %%%%  specify labels used to cite sources in the document.  
 
-\begin{thebibliography}{99}
-\addcontentsline{toc}{chapter}{Bibliography}
-
-\bibitem{A1}
-A.N.~Author.  The best paper of all.
-{\em Some really good reference} {\bf 12}, pp.~100--113, 2003.
-
-\bibitem{Someone}
-S.~omeone.  A paper that I wish I'd written.  
-{\em J.\ Combinatorics} {\bf 34}, pp.~25--78, 1979.  
-
-\end{thebibliography}
-
+\bibliography{bibliography}{}
+\bibliographystyle{plain}
 
 %%%%   APPENDICES
 \appendix

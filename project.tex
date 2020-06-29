@@ -1,6 +1,10 @@
 \documentclass[a4paper,11pt]{report}
 \usepackage{cite}
 \usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{chngcntr}
+
+\counterwithout{figure}{chapter}
 
 %%%%  Add some length to the page, as margins always seem too big.  
 \addtolength{\topmargin}{-.5in}
@@ -49,10 +53,19 @@ MASTER OF SCIENCE
 %%%%  ABSTRACT
 \chapter*{\center Abstract}
 
-The aim of the project is to create an application which enables ASDA colleagues to identify and inform colleagues of which items within their fresh departments are going out of date and need to be marked down or could potentially be provided to food shelters. The technology that will be utilised in this project will make use of mobile technology, backend web services and Database stored procedures in order to analyse and inform colleagues which items are likely to go out of date on which date and then informs colleagues to go and reduce the products. This application will be used throughout ASDA stores by colleagues on a daily basis and could produce a significant cost saving and waste reduction.
+The aim of the project is to create an application which enables ASDA colleagues to identify
+and inform colleagues of which items within their fresh departments are going out of date and
+need to be marked down or could potentially be provided to food shelters. The technology that
+will be utilised in this project will make use of mobile technology, backend web services and 
+Database stored procedures in order to analyse and inform colleagues which items are likely to go 
+out of date on which date and then informs colleagues to go and reduce the products. This application
+will be used throughout ASDA stores by colleagues on a daily basis and could produce a significant
+cost saving and waste reduction.
 \\
 \\
-The final products of this project will be a system of applications which will be ready for deployment into an ASDA store in the future. The requirements and periodic demoing of the produced solution will be provided by ASDA technology colleagues.
+The final products of this project will be a system of applications which will be ready for deployment
+into an ASDA store in the future. The requirements and periodic demoing of the produced solution will
+be provided by ASDA technology colleagues.
 
 \newpage
 
@@ -124,9 +137,14 @@ degree of this or any other university or degree-awarding body.
 
 \subsection{ASDA}
 This project is being completed on behalf of ASDA.
-ASDA is one of the four largest supermarkets in the UK stocking a variety of goods including fresh, frozen and ambient food goods, non perishable items such as clothes and home products and various other lines of stock. The main focus of this project will be on the management of fresh stock which has a recent expirary date e.g. fresh fruit and vegetables and chilled meats and dairy goods.
+ASDA is one of the four largest supermarkets in the UK stocking a variety of goods including fresh,
+frozen and ambient food goods, non perishable items such as clothes and home products and various
+other lines of stock. The main focus of this project will be on the management of fresh stock which
+has a recent expirary date e.g. fresh fruit and vegetables and chilled meats and dairy goods.
 
-As well as being one of the main supermarkets in the UK, ASDA is also part of the US company Wal-Mart which is at the time of writing listed as the largest company in the world. This affords ASDA some benefits with regards to technology via the use of shared technologies across the globe.
+As well as being one of the main supermarkets in the UK, ASDA is also part of the US company Wal-Mart 
+which is at the time of writing listed as the largest company in the world. This affords ASDA some 
+benefits with regards to technology via the use of shared technologies across the globe.
 
 Despite this project being completed on behalf of ASDA the applications and software that will be produced at the end of it will
  be suitable for use by any business which deals with products that have an expiration date or use by date.
@@ -151,31 +169,70 @@ The key goals of the developed system are to include:
 \subsection{Potential Expansion}
 - Timesheeting
 \\
-Through the use of data mining from the data collected by the application, we should ba able to accurately predict how long it takes staff to organisae and mark down the expiring items within their respective departments. Once this data has been collected then theoretically it could be used in order to calculate how many staff are needed in order to mark down items on a particular day depending on the number of items that need to be reduced as well as the length of time that it is likely to take the staff in order to mark down or redistribute the expiring stock on the shop floor. 
+Through the use of data mining from the data collected by the application, we should ba able to accurately predict
+how long it takes staff to organisae and mark down the expiring items within their respective departments. Once 
+this data has been collected then theoretically it could be used in order to calculate how many staff are needed 
+in order to mark down items on a particular day depending on the number of items that need to be reduced as well 
+as the length of time that it is likely to take the staff in order to mark down or redistribute the expiring stock
+on the shop floor. 
 \\
 - Stock Prediction and Inventory Management
 \\
-By analysing the number of items which are expiring in individual stores we should also be able to perform trend analysis on the data which should highlight items of stock which are repeatedly marked down. This trend analysis could then be used to inform store managers and the ASDA inventory management systems of any over ordering which is occuring and allow for more accurate stock levels to reduce potential waste in the future.
+By analysing the number of items which are expiring in individual stores we should also be able to perform trend 
+analysis on the data which should highlight items of stock which are repeatedly marked down. This trend analysis 
+could then be used to inform store managers and the ASDA inventory management systems of any over ordering which is 
+occuring and allow for more accurate stock levels to reduce potential waste in the future.
 \\
 
 \section{Approach}
 
 \subsection{Project Methodology}
-The methodology that I have chosen to implement this project in is a scrum agile methodology which involves short iterations of development spread over the 8 weeks I will be developing my solution in. 
+The methodology that I have chosen to implement this project in is a scrum agile methodology which involves short 
+iterations of development spread over the 8 weeks I will be developing my solution in. 
 This will include the breaking down of the application development into smaller development tasks which can be completed easily. 
 \\
 \\
-Scrum involves the sizing, estimation and development of the development tasks prior to development. Once completed the developed features will be demoed to the project supervisors and stakeholders in order to gain feedback which can potentially be added to the project backlog and acted on in following sprints.
+Scrum involves the sizing, estimation and development of the development tasks prior to development. Once completed
+the developed features will be demoed to the project supervisors and stakeholders in order to gain feedback which 
+can potentially be added to the project backlog and acted on in following sprints.
 \\
+The project will include the management and development of multiple application features. Each of the features will 
+be detailed and documented on a kanban board (See Figure~\ref{fig:kanbanBoard}) which will be managed via the Trello 
+application.  As can be seen in Figure 1 the kanban board is broken down into "To Do", "Doing" and "Done" swim lanes 
+which allows the user to easily identify the state of the feature that is being developed.
 
-The project will include the management and development of multiple application features. Each of the features will be detailed and documented on a kanban board which will be managed via the Trello application.
+\begin{figure}
+    \includegraphics[width=\linewidth]{./assets/images/Kanban-board.png}
+    \caption{Xpire Kanban Board}
+    \label{fig:kanbanBoard}
+\end{figure}
+
+Scrum typically consists of 5 different types of meetings: the stand up, the planning, the Retro and the refinement 
+session. All of these sessions are performed once throughout the sprint in order to plan, agree and highlight any 
+issues that the development team might be having throughout the week.
+
+%%%%  BACKGROUND
+
+\chapter{Background}\label{chap:background}
+
+As part of the preperation of this specification I have conducted an investigation into research that others
+ have conducted similar to my project. I have also looked for potentially similar applications which offer 
+ similar functionality to users. Below is an outline of the applications and a comparison against the functionality
+  that they offer against what my app will capable of.
 
 
+%%%%  DESIGN
 
-Scrum typically consists of 5 different types of meetings: the stand up, the planning, the Retro and the refinement session. All of these sessions are performed once throughout the sprint in order to plan, agree and highlight any issues that the development team might be having throughout the week.
+\chapter{Design}\label{chap:design}
+\section{Architectural Diagram}
 
-\subsection{Architectural Diagram}
+\begin{figure}[h!]
+    \includegraphics[width=\linewidth]{./assets/images/architecture_diagram.png}
+    \caption{Xpire Architecture Diagram}
+    \label{fig:architecture-diagram}
+\end{figure}
 
+As shown in the architecture diagram (Fig.~\ref{fig:architecture-diagram})
 - The Application will be reachable via 3 methods:
 \\
 - An android application which is available on in store handsets called TC70, TC70X and TC72. These devices are available to all colleagues who work within ASDA stores and are frequently used for other applications within the store eco system.
@@ -183,10 +240,8 @@ Scrum typically consists of 5 different types of meetings: the stand up, the pla
 - An android and iOS application which will be downloadable and usable from users personal devices
 A web browser which is accessible from a managers workbench or a colleague laptop. 
 
-\subsection{Continuous Integration \& Continuous Deployment}
-
 \subsection{Application Breakdown}
-As shown in the architectural diagram the application will consist of three seperate applications and 2 databases.
+As shown in the architectural diagram in Figure~\ref{fig:architecture-diagram} the application will consist of three separate applications and two databases.
  Below are the descriptions and breakdowns of the applications:
 
 \subsubsection{Mobile Application}
@@ -208,27 +263,16 @@ The use of Azure Cosmos DB for logging data due to the speed that items can be b
 \subsubsection{Authentication \& Authorisation}
 SingleSignOn is the authentication method which I have chosen to adopt for all of my applications. This allows the applications to integrate well within the ASDA technology stack and ensures that colleagues will be able to authenticate with their normal credentials. This removes the need for colleagues to need to remember new credentials or to have to have other accounts created in order to use the Xpire application. 
 
-\subsection{UML}
-UML diagram of example task for frequently performed tasks
-The UML diagram outlined below shows user interaction of the various applications.
-
 \subsection{Interaction Chart}
-The Interaction Chart below hightlights how a user interacts with the planned application and the flow of processes in order to complete the functionality of the user. 
-Complete check item information and expiration date.
+The Interaction Chart (see Fig~\ref{fig:eventTrace}) below which highlights how a user interacts with the planned application and the flow of processes in order to complete the scanning and checking of product details and expiry dates with a mobile devices.
+The event trace details how a colleague will complete an item information and expiration date check process.
 
-%%%%  BACKGROUND
-
-\chapter{Background}\label{chap:background}
-
-As part of the preperation of this specification I have conducted an investigation into research that others
- have conducted similar to my project. I have also looked for potentially similar applications which offer 
- similar functionality to users. Below is an outline of the applications and a comparison against the functionality
-  that they offer against what my app will capable of.
-
-
-%%%%  DESIGN
-
-\chapter{Design}\label{chap:design}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.7]{./assets/images/eventTrace-itemscan.png}
+    \caption{Mobile Event Trace}
+    \label{fig:eventTrace}
+\end{figure}
 
 
 %%%%   REFERENCES

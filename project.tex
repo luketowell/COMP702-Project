@@ -140,7 +140,7 @@ This project is being completed on behalf of ASDA.
 ASDA is one of the four largest supermarkets in the UK stocking a variety of goods including fresh,
 frozen and ambient food goods, non perishable items such as clothes and home products and various
 other lines of stock. The main focus of this project will be on the management of fresh stock which
-has a recent expirary date e.g. fresh fruit and vegetables and chilled meats and dairy goods.
+has a recent expiry date e.g. fresh fruit and vegetables and chilled meats and dairy goods.
 
 As well as being one of the main supermarkets in the UK, ASDA is also part of the US company Wal-Mart 
 which is at the time of writing listed as the largest company in the world. This affords ASDA some 
@@ -211,23 +211,48 @@ Scrum typically consists of 5 different types of meetings: the stand up, the pla
 session. All of these sessions are performed once throughout the sprint in order to plan, agree and highlight any 
 issues that the development team might be having throughout the week.
 
-\subsection{Project Timeline}
-
-insert gannt chart / proposed timeline of the project
-
 %%%%  BACKGROUND
 
-\chapter{Background}\label{chap:background}
+\section{Review of previous works}
 
-As part of the preperation of this specification I have conducted an investigation into research that others
- have conducted similar to my project. I have also looked for potentially similar applications which offer 
- similar functionality to users. Below is an outline of the applications and a comparison against the functionality
-  that they offer against what my app will capable of.
+at the moment sustainability and environmental responsibility are very prevelant in our day
+to day lives. This ranges from the recycling which is carried out by all councils across
+england to the protests and activism that takes place all across the UK by groups such 
+as The Extinction Rebellion. There are regularly discussions in the media about the impact
+that society and our daily habbits are having on the world that we live in and what we need
+to do to attempt to repair and improve our environmental impact. 
+\\
+\\
+It is largely accepted that we all have a part to play in assisting and improving the environment
+of the planet and this is especially true for large corporations and businesses. 
+ASDA as one of the Main supermarkets in the UK has stood up and accepted its responsibility
+which is why they regularly publish information on how customers can live more sustainably \ref{} 
+by reducing their own dependence on plastics or by wasting food. 
+\\
+\\
+ASDA has also focused on various schemes to be a more environmentally conscious retailer. 
+These can include working with FareShare ~\ref{asda:foodwaste} or reducing their plastics. 
+The reason that this project is being completed on behalf of ASDA is because we hope that 
+the Application produced as an out put of the project will mean that ASDA can continue to 
+innovate and be more sustainable by reducing the food wastage within their stores by
+contributing more to charity, reducing the amount that is ordered into stores and by 
+having a better grip on items that are about to go out of date so that they can be 
+promptly reduced for our customers.  
+\\ 
+\\  
+As part of the further research into the previous work others have done that is similar to my project 
+I have looked for potentially similar applications which offer similar functionality to users. 
+Below is an outline of the applications and a comparison against the functionality that they
+offer against what my app will capable of.
 
 
 %%%%  DESIGN
 
 \chapter{Design}\label{chap:design}
+This chapter covers the planned design of the Xpire system. At the moment all of the plans
+for the application are theoretical and could potentially change however I believe that
+this is a sensible approach which should be suitable for the proposed system.
+
 \section{Architectural Diagram}
 
 \begin{figure}[h!]
@@ -278,7 +303,23 @@ The event trace details how a colleague will complete an item information and ex
     \label{fig:eventTrace}
 \end{figure}
 
+\chapter{Data}\label{chap:data}
+\section{Data used in the system}
+The data used in the system will be item based information which will include a unique identifier
+for an item, the expiry date / use by date of the item, the product name, the producer of the item, 
+the store quantity of an item and an image of the item. 
+All of this data will be available from internal ASDA databases. 
 
+Other data which the application will make use of are the request details of requests 
+within the system. This data is collected for the purpose of troubleshooting and monitoring
+and alerting of potential issues within the application. The data will include, Request Type,
+Request Content, Timestamp, Response Content, Response Information and Request Origin.
+   
+   
+\section{Ethical Use of Data}
+The data that is gathered in my application is not human related data. The application only deals with the gathering of information on items and stores. No user identifiable data is used therefore I have agreed with my supervisor that there is no need to need to apply for the 
+
+\chapter{Plan}\label{chap:plan}
 %%%%   REFERENCES
 
 %%%%  Section for references, using the \bibitem directive to 

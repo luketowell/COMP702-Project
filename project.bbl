@@ -1,3 +1,29 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{asda-food-waste}
+ASDA.
+\newblock Asda food waste, 2020.
+
+\bibitem{asda-sustainable-living}
+ASDA.
+\newblock How to live more sustainably during lockdown, 2020.
+
+\bibitem{asda-wastewar}
+ASDA.
+\newblock Win the war on waste, 2020.
+
+\bibitem{gamma1994design}
+E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides.
+\newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
+\newblock Addison-Wesley Professional Computing Series. Pearson Education,
+  1994.
+
+\bibitem{wrap-food-drink}
+WRAP.
+\newblock Wrap: Food and drink, 2020.
+
+\bibitem{wrapvision}
+WRAP.
+\newblock Wrap: Vision, 2020.
 
 \end{thebibliography}

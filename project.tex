@@ -2,7 +2,9 @@
 \usepackage{cite}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{appendix}
 \usepackage{chngcntr}
+\usepackage{caption}
 
 \counterwithout{figure}{chapter}
 
@@ -26,7 +28,7 @@ ASDA Stocking Support System (Xpire)}
 \author{
 Luke Michael Towell
 \\    \\    \\
-A DISSERTATION
+A Synopsis and Design
 \\    \\
 Submitted to 
 \\    \\    \\ 
@@ -167,22 +169,20 @@ The key goals of the developed system are to include:
 - Stock which is wasted will be reduced and identified for redistribution.
 
 \subsection{Potential Expansion}
-- Timesheeting
-\\
+\subsubsection{Timesheeting}
 Through the use of data mining from the data collected by the application, we should ba able to accurately predict
-how long it takes staff to organisae and mark down the expiring items within their respective departments. Once 
+how long it takes staff to organise and mark down the expiring items within their respective departments. Once 
 this data has been collected then theoretically it could be used in order to calculate how many staff are needed 
 in order to mark down items on a particular day depending on the number of items that need to be reduced as well 
 as the length of time that it is likely to take the staff in order to mark down or redistribute the expiring stock
 on the shop floor. 
-\\
-- Stock Prediction and Inventory Management
-\\
+
+\subsubsection{Stock Prediction and Inventory Management}
+
 By analysing the number of items which are expiring in individual stores we should also be able to perform trend 
 analysis on the data which should highlight items of stock which are repeatedly marked down. This trend analysis 
 could then be used to inform store managers and the ASDA inventory management systems of any over ordering which is 
 occuring and allow for more accurate stock levels to reduce potential waste in the future.
-\\
 
 \section{Approach}
 
@@ -215,23 +215,27 @@ issues that the development team might be having throughout the week.
 
 \section{Review of previous works}
 
-at the moment sustainability and environmental responsibility are very prevelant in our day
+At the moment sustainability and environmental responsibility are very prevelant in our day
 to day lives. This ranges from the recycling which is carried out by all councils across
 england to the protests and activism that takes place all across the UK by groups such 
 as The Extinction Rebellion. There are regularly discussions in the media about the impact
-that society and our daily habbits are having on the world that we live in and what we need
-to do to attempt to repair and improve our environmental impact. 
+that society and our daily habits are having on the world that we live in and what we need
+to do to attempt to repair and improve our environmental impact. Wrap (Waste \& Resources Action Programme) \cite{wrapvision}
+is a charity which is focused on raising public awareness of the various types of waste throughout the UK
+in order to improve the use of resources in a more efficient way and to develop more sustainable products.
+One of the focuses of WRAP is the food industry, WRAP highlights that approximately one third of global food
+is wasted which equates to an economic loss of approximately \$984 billion globally and above £19 billion in the UK alone \cite{wrap-food-drink}.
 \\
 \\
 It is largely accepted that we all have a part to play in assisting and improving the environment
 of the planet and this is especially true for large corporations and businesses. 
 ASDA as one of the Main supermarkets in the UK has stood up and accepted its responsibility
-which is why they regularly publish information on how customers can live more sustainably \ref{} 
-by reducing their own dependence on plastics or by wasting food. 
+which is why they regularly publish information on how customers can live more sustainably \cite{asda-sustainable-living} 
+by reducing their own dependence on plastics or by wasting food\cite{asda-wastewar}. 
 \\
 \\
 ASDA has also focused on various schemes to be a more environmentally conscious retailer. 
-These can include working with FareShare ~\ref{asda:foodwaste} or reducing their plastics. 
+These can include working with FareShare \cite{asda-food-waste} or reducing their plastics. 
 The reason that this project is being completed on behalf of ASDA is because we hope that 
 the Application produced as an out put of the project will mean that ASDA can continue to 
 innovate and be more sustainable by reducing the food wastage within their stores by
@@ -262,12 +266,13 @@ this is a sensible approach which should be suitable for the proposed system.
 \end{figure}
 
 As shown in the architecture diagram (Fig.~\ref{fig:architecture-diagram})
-- The Application will be reachable via 3 methods:
+- The Application will be usable via 3 methods:
 \\
-- An android application which is available on in store handsets called TC70, TC70X and TC72. These devices are available to all colleagues who work within ASDA stores and are frequently used for other applications within the store eco system.
+- An android application which is available on in store handsets called TC70, TC70X or TC72. These devices are available to all colleagues who work within ASDA stores and are frequently used for other applications within the store ecosystem.
 \\
-- An android and iOS application which will be downloadable and usable from users personal devices
-A web browser which is accessible from a managers workbench or a colleague laptop. 
+- An android and iOS application which will be downloadable and usable from store colleagues personal devices via an internal application management system.
+\\
+- A web browser which is accessible from a managers workbench or a colleague laptop. This will give colleagues an alternative view of the application due to the fact that the application is not being accessed via a mobile device.
 
 \subsection{Application Breakdown}
 As shown in the architectural diagram in Figure~\ref{fig:architecture-diagram} the application will consist of three separate applications and two databases.
@@ -275,26 +280,26 @@ As shown in the architectural diagram in Figure~\ref{fig:architecture-diagram} t
 
 \subsubsection{Mobile Application}
 The mobile versions of the application will be written using React-Native which is a modern mobile development
- framework created and maintained by Facebook. The reason for choosing React Native is because of the fact that it is a well known and well documented framework with a large and active user community. It is also the recommended mobile development framework for ASDA and Wal-Mart. 
+ framework created and maintained by Facebook. The reason for choosing React Native is because it is a well known and well documented framework with a large and active user community. It is also the recommended mobile development framework for ASDA and Wal-Mart. 
 
 \subsubsection{Web Application}
 The web application will be written using React which is very similar to React-native and has also been widely adopted. There are plenty of libraries for React and it is the chosen development framework because I am already familiar with the React ecosystem. 
 
 \subsubsection{Backend Web Services}
-Written in Java spring boot which ensures that the services will be enterprise worthy. The services will be hosted within a docker image and will be able to be span up on either Azure application servers or Azure Kubernetes clusters. Object orientated services written using the repository design pattern. All services will be thoroughly unit tested. The webservices will be documented using Swagger so that users and future developers are easily able to pick up and alter the code base. 
+The web services of the system are going to be developed using Java Spring Boot which ensures that the services will be enterprise worthy. The services will be hosted within a docker image and will be able to be span up on either Azure application servers or Azure Kubernetes clusters. The web services will be written using the repository design pattern\cite{gamma1994design} for interacting with the databases. All services will be thoroughly unit tested. The web services will be documented using Swagger so that users and future developers are easily able to pick up and alter the code base. 
 
 \subsubsection{Azure SQL Databases}
-SQL data which will be encrypted in transit and at rest manually. This database will contain the item data including sell by and use by dates as well as unique item Identifier and item Name. At the moment I am unsure as to if I will store images of the individual items. If I do then the SQL database will also store the references to the relevant item images.
+SQL data which will be encrypted in transit and at rest manually. This database will contain the item data which is discussed in Chapter~\ref{chap:data} below. At the moment I am unsure as to if I will store images of the individual items within BLOB storage. If I do decide to store item images then the SQL database will also store the references to the relevant item images.
 
 \subsubsection{Azure Cosmos Database}
-The use of Azure Cosmos DB for logging data due to the speed that items can be both written and retrieved from the data stores. Azure Cosmos DB is the Azure non relational database offering with encryption both in transit and at rest. Azure also guarantee an uptime of 99.99999\% 
+I have chosen to use Azure Cosmos DB for logging data due to the speed that items can be both written and retrieved from the data stores. Azure Cosmos DB is the Azure non relational database offering with encryption both in transit and at rest.
 
 \subsubsection{Authentication \& Authorisation}
 SingleSignOn is the authentication method which I have chosen to adopt for all of my applications. This allows the applications to integrate well within the ASDA technology stack and ensures that colleagues will be able to authenticate with their normal credentials. This removes the need for colleagues to need to remember new credentials or to have to have other accounts created in order to use the Xpire application. 
 
 \subsection{Interaction Chart}
-The Interaction Chart (see Fig~\ref{fig:eventTrace}) below which highlights how a user interacts with the planned application and the flow of processes in order to complete the scanning and checking of product details and expiry dates with a mobile devices.
-The event trace details how a colleague will complete an item information and expiration date check process.
+The Interaction Chart (see Fig~\ref{fig:eventTrace}) below highlights how a user interacts with the planned application. Figure ~\ref{fig:eventTrace} details the processes that are involved in one simple use case of the application in order to complete the scanning and checking of product details and expiry dates with a mobile device.
+The event trace details how a colleague will scan the barcode of an item  in order to query the DB for item information and expiration date. Using the information provided the employee will then be able to reduce the item on the shop floor.
 
 \begin{figure}[ht]
     \centering
@@ -317,19 +322,57 @@ Request Content, Timestamp, Response Content, Response Information and Request O
    
    
 \section{Ethical Use of Data}
-The data that is gathered in my application is not human related data. The application only deals with the gathering of information on items and stores. No user identifiable data is used therefore I have agreed with my supervisor that there is no need to need to apply for the 
+The data that is gathered in my application is not human related data.
+The application only deals with the gathering of information on items and stores.
+No user identifiable data is used therefore I have agreed with my supervisor that
+there is no need to need to complete the Ethical Approval Form.
+
+The only human data that will be used within this project is the feedback and opinions
+of employees for ASDA which will be used in order to assess wether the goals of the 
+project have been met. The consent of those whose feedback I will be using will be 
+collected as and when it is required and Each individual will complete a consent form
+prior to their opinions being included in the final report.
 
 \chapter{Plan}\label{chap:plan}
+The main milestones of my project are outlined in the Gannt Chart in Appendix~\ref{app:ganntchart}. 
+
+The main milestones identified are: 
+\subsubsection{Research}
+I have so far completed this section of the priject which involved research into the background of my project as well as looking into previous solutions that have been developed which offer similar functionality to the system I intend to produce.
+\subsubsection{Synopsis}
+This section will be complete with the production of this document which details what the project aims are and an initial plan of how I will complete my aims.
+\subsubsection{Design}
+The design phase of the project is going to focus on the production of user interfaces for the various applications within the system.
+\subsubsection{Development Sprints}
+The development section is the longest continuous section of the project which I plan on splitting into eight, one week iterations which will include planning, development and demoing of individual features. This has been dicussed further in chapter~\ref{chap:intro}.
+\subsubsection{Testing}
+As part of the agile methodology I will be testing my code as I write it in each iteration.
+\subsubsection{Demo / Deployment}
+I have included a main milestone which is the final demo of the complete working system to the project stakeholders in order to gain final feedback which will be used to assess wether the project has completed its main aims. 
+\subsubsection{Write up}
+The write up of the project documentation is the longest individual section of my project as I aim to write up the documentation as I work through the project. 
+\subsubsection{Dissertation proof read and finalisation}
+The final stage of the project includes the proof reading of my final report and final adjustments prior to submission.
 %%%%   REFERENCES
 
 %%%%  Section for references, using the \bibitem directive to 
 %%%%  specify labels used to cite sources in the document.  
+\newpage
+\addcontentsline{toc}{chapter}{Appendices}
+\begin{appendix}
+\chapter{Xpire Project Gannt Chart}\label{app:ganntchart}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.6]{./assets/images/gannt.png}
+    {\caption*{Xpire Project Gannt Chart}}
+    \label{fig:eventTrace}
+\end{figure}
+\end{appendix}
 
-\bibliography{bibliography}{}
+\bibliography{bibliography}
 \bibliographystyle{plain}
 
 %%%%   APPENDICES
-\appendix 
 
 
 \end{document}

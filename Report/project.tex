@@ -138,39 +138,68 @@ degree of this or any other university or degree-awarding body.
 \section{Scope}
 
 \subsection{ASDA}
-This project is being completed on behalf of ASDA.
 ASDA is one of the four largest supermarkets in the UK stocking a variety of goods including fresh,
 frozen and ambient food goods, non perishable items such as clothes and home products and various
-other lines of stock. The main focus of this project will be on the management of fresh stock which
-has a recent expiry date e.g. fresh fruit and vegetables and chilled meats and dairy goods.
-
+other lines of stock. 
+\\
+\\
+ASDA as one of the main supermarkets in the UK has stood up and accepted its responsibility
+which is why they regularly publish information on how customers can live more sustainably \cite{asda-sustainable-living} 
+by reducing their own dependence on plastics or by wasting food\cite{asda-wastewar}. In 2018 data gathered and published by
+ASDA indicated that approximately 31,883 Tonnes of food was wasted in the ASDA supply chain \cite{asda-food-waste-data}.
+Some of this food has been given to charity and recycled however there is still a desire by ASDA to improve their wastage.
+In 2018 ASDA improved wastage by giving away approximately 2.7 million meals and increasing their food donations by 26 \%.\cite{asda-food-waste-data}
+\\
+\\
+This project is being completed on behalf of ASDA with the hope that 
+the application produced will enable ASDA to continue to 
+innovate and be more sustainable. This can be achieved by reducing the food wastage within their stores by
+contributing more to charity, reducing the amount that is ordered into stores and by 
+having a better grip on items that are about to go out of date so that they can be 
+promptly reduced for our customers.
+\\
+\\
+The main focus of this project will be on the management of fresh stock which
+has a recent expiry date e.g. fresh fruit and vegetables and chilled meats and dairy goods. 
+This focus has been identified by looking at food wastage data and identifying that 26\% of
+food waste is fresh food, 16 \% is chilled and a further 16\% is dairy produce\cite{asda-food-waste-data}.
+\\
+\\
 As well as being one of the main supermarkets in the UK, ASDA is also part of the US company Wal-Mart 
 which is at the time of writing listed as the largest company in the world. This affords ASDA some 
 benefits with regards to technology via the use of shared technologies across the globe.
-
+\\
+\\
 Despite this project being completed on behalf of ASDA the applications and software that will be produced at the end of it will
- be suitable for use by any business which deals with products that have an expiration date or use by date.
+be suitable for use by any business which deals with products that have an expiration date or use by date.
 
 \subsection{Problem Statement}\label{sec:problem}
 
 The aim of this project is to design an application and stock management system which is able
- to inform store managers and store colleagues on which items of stock are going out of date or
- close to going out of date on the shop floor. This stock will then either be marked 
- down on the shop floor in order to be sold on the day or will be identified as able to be donated to other charitable
+to inform store managers and store colleagues on which items of stock are going out of date or
+close to going out of date on the shop floor. This stock will then either be marked 
+down on the shop floor in order to be sold on the day or will be identified as able to be donated to other charitable
 causes within the local community as part of the ASDA commitment to engage and assist in the local community.
 \\
 \\
 The key goals of the developed system are to include:
-
+\\
 - An application which will direct colleagues to which items need to be marked down.
-
+\\
 - The hours spent in store manually marking down products will be reduced.
-
+\\
 - Stock which is wasted will be reduced and identified for redistribution.
+\\
+\\
+These goals will be assessed by peer review of colleagues in ASDA. I am also aiming to 
+deploy the application in a live ASDA store with the aim of it being used in a live environment.
+If I am able to deploy a POC into a live store then I will also assess the success of the 
+application by comparing the product waste prior to usage in store against the wastage from 
+the time that the application is used in store. 
 
 \subsection{Potential Expansion}
 \subsubsection{Timesheeting}
-Through the use of data mining from the data collected by the application, we should ba able to accurately predict
+Through the use of data mining from the data collected by the application, we should be able to accurately predict
 how long it takes staff to organise and mark down the expiring items within their respective departments. Once 
 this data has been collected then theoretically it could be used in order to calculate how many staff are needed 
 in order to mark down items on a particular day depending on the number of items that need to be reduced as well 
@@ -200,7 +229,6 @@ The project will include the management and development of multiple application 
 be detailed and documented on a kanban board (See Figure~\ref{fig:kanbanBoard}) which will be managed via the Trello 
 application.  As can be seen in Figure 1 the kanban board is broken down into "To Do", "Doing" and "Done" swim lanes 
 which allows the user to easily identify the state of the feature that is being developed.
-
 \begin{figure}
     \includegraphics[width=\linewidth]{./assets/images/Kanban-board.png}
     \caption{Xpire Kanban Board}
@@ -229,19 +257,10 @@ is wasted which equates to an economic loss of approximately \$984 billion globa
 \\
 It is largely accepted that we all have a part to play in assisting and improving the environment
 of the planet and this is especially true for large corporations and businesses. 
-ASDA as one of the Main supermarkets in the UK has stood up and accepted its responsibility
-which is why they regularly publish information on how customers can live more sustainably \cite{asda-sustainable-living} 
-by reducing their own dependence on plastics or by wasting food\cite{asda-wastewar}. 
 \\
 \\
 ASDA has also focused on various schemes to be a more environmentally conscious retailer. 
 These can include working with FareShare \cite{asda-food-waste} or reducing their plastics. 
-The reason that this project is being completed on behalf of ASDA is because we hope that 
-the Application produced as an out put of the project will mean that ASDA can continue to 
-innovate and be more sustainable by reducing the food wastage within their stores by
-contributing more to charity, reducing the amount that is ordered into stores and by 
-having a better grip on items that are about to go out of date so that they can be 
-promptly reduced for our customers.  
 \\ 
 \\  
 As part of the further research into the previous work others have done that is similar to my project 
@@ -249,14 +268,36 @@ I have looked for potentially similar applications which offer similar functiona
 Below is an outline of the applications and a comparison against the functionality that they
 offer against what my app will capable of.
 
-Too Good To Go
+\subsubsection{Too Good To Go}
+Too Good To Go is an application which users are able to install on their devices.
+The app displays to the user businesses which are offering their surplus food for a reduced price.
+The user simply has to visit the business which is selling its reduced stock in the form of a "Magic Bag" \cite{too-good-to-go}.
+\\
+\\
+When looking at Too Good To Go there are certainly similarities to the application that I am going to 
+produce with regards to the aim of reducing waste however the main difference is that Too Good To Go 
+has a focus on being the central hub for retailers to advertise their reduced produce where as the application
+ I intend to produce will highlight to the user which items are going out of date. 
 
-Totalctl
-
-Olio
-
-Neighbourly
-
+\subsubsection {Totalctrl}
+TotalCtl is an application focused on inventory management and identifying when items are going to go out of
+date which then allows the retailer, restaurant, cafe or other business to either dispose or reduce their products.
+TotalCtl enables management via dashboards, graphing and alerting and is very similar application to what I am to produce\cite{totalctrl}.
+\\
+\\
+The main difference I have identified between totalctl and my proposed solution
+is that total control requires the user to upload invoices from suppliers when
+items are delivered so that it can maintain its record keeping. My application 
+on the other hand will make use of internal ASDA data stores, these are automatically
+updated and will also enable the store to monitor stock without colleagues having to
+manually enter invoices into the system.
+\\
+\\
+Obviously the other key difference between my application and the applications discussed previously
+is that my application will only deal with identifying waste that is going to go out of date within ASDA stores.
+Once the stock is identified then it will be up to the colleague to decide what is done with that store following ASDA policy.
+\\
+\\
 The main benefit of my application is that it is built bespoke for ASDA architecture and makes
 use of current systems and architecture ensuring that from the beginning the application will 
 work inside the ASDA ecosystem without the need for any extra development costs to make use of
@@ -281,9 +322,12 @@ this is a sensible approach which should be suitable for the proposed system.
 As shown in the architecture diagram (Fig.~\ref{fig:architecture-diagram})
 - The Application will be usable via 3 methods:
 \\
+\\
 - An android application which is available on in store handsets called TC70, TC70X or TC72. These devices are available to all colleagues who work within ASDA stores and are frequently used for other applications within the store ecosystem.
 \\
+\\
 - An android and iOS application which will be downloadable and usable from store colleagues personal devices via an internal application management system.
+\\
 \\
 - A web browser which is accessible from a managers workbench or a colleague laptop. This will give colleagues an alternative view of the application due to the fact that the application is not being accessed via a mobile device.
 
@@ -327,7 +371,8 @@ The data used in the system will be item based information which will include a 
 for an item, the expiry date / use by date of the item, the product name, the producer of the item, 
 the store quantity of an item and an image of the item. 
 All of this data will be available from internal ASDA databases. 
-
+\\
+\\
 Other data which the application will make use of are the request details of requests 
 within the system. This data is collected for the purpose of troubleshooting and monitoring
 and alerting of potential issues within the application. The data will include, Request Type,
@@ -339,7 +384,8 @@ The data that is gathered in my application is not human related data.
 The application only deals with the gathering of information on items and stores.
 No user identifiable data is used therefore I have agreed with my supervisor that
 there is no need to need to complete the Ethical Approval Form.
-
+\\
+\\
 The only human data that will be used within this project is the feedback and opinions
 of employees for ASDA which will be used in order to assess wether the goals of the 
 project have been met. The consent of those whose feedback I will be using will be 
@@ -376,9 +422,13 @@ The final stage of the project includes the proof reading of my final report and
 \chapter{Xpire Project Gannt Chart}\label{app:ganntchart}
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.6]{./assets/images/gannt.png}
-    {\caption*{Xpire Project Gannt Chart}}
-    \label{fig:eventTrace}
+    \includegraphics[scale=1.0]{./assets/images/gannt1.png}
+    {\caption*{Xpire Project Gannt Chart June - July}}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=1.0]{./assets/images/gannt2.png}
+    {\caption*{Xpire Project Gannt Chart August - September}}
 \end{figure}
 \end{appendix}
 

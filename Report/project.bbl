@@ -1,5 +1,9 @@
 \begin{thebibliography}{1}
 
+\bibitem{asda-food-waste-data}
+ASDA.
+\newblock Asda food waste data, 2019.
+
 \bibitem{asda-food-waste}
 ASDA.
 \newblock Asda food waste, 2020.
@@ -17,6 +21,14 @@ E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides.
 \newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
 \newblock Addison-Wesley Professional Computing Series. Pearson Education,
   1994.
+
+\bibitem{too-good-to-go}
+Too Good~To Go.
+\newblock Too good to go - about us, 2020.
+
+\bibitem{totalctrl}
+TotalCtrl.
+\newblock Totalctrl food waste solutions, 2020.
 
 \bibitem{wrap-food-drink}
 WRAP.
